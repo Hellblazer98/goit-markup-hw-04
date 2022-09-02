@@ -8,6 +8,7 @@
     --btn-color:#F5F4FA;
     --black-color:#000000;
     --hover-color:#188CE8;
+    --icon-color:#AFB1B8;
 }
 
 body {
@@ -113,7 +114,8 @@ img {
     accent-color: var(--attention-color);
 }
 .contacts-list .contact {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
@@ -121,7 +123,12 @@ img {
     line-height: 1.15;
     letter-spacing: 0.02em;
     color: var(--text-color);
+}
 
+.contact .icon {
+    fill: currentColor;
+    margin-right: 10px;
+   
 }
 
 .contacts-list .contact:hover,
@@ -135,7 +142,16 @@ img {
 
 /* Герой */
 .hero {
+    min-height: 600px;
     background-color: var(--secondary-bgcolor);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),
+       rgba(47, 48, 58, 0.4)), url(../images/main-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
 }
 
 .hero-container {
@@ -195,6 +211,17 @@ img {
 .advantage-container {
     display: flex;
     align-items: center;
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background: var(--btn-color);
+    border-radius: 4px;
 }
 
 .advantage-list {
@@ -271,6 +298,7 @@ img {
     line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 16px;
 }
 
 .team-wrapper {
@@ -279,12 +307,78 @@ img {
     border-radius: 0px 0px 4px 4px;
     padding-bottom: 30px;
 }
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-list .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+}
+
+.social-link .icon {
+    fill:var(--icon-color)
+}
+
+.social-link:hover,
+.social-link:focus {
+    fill: var(--background-color);
+    background: var(--attention-color);
+    border-radius: 50%;
+}
+
+.social-link:hover .icon {
+    fill: var(--background-color);
+}
+
+/* Клієнти */
+
+.clients-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.client-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+}
+
+.client-link .icon {
+    fill: var(--icon-color);
+}
+
+.client-link:hover,
+.client-link:focus {
+    border-color: var(--attention-color) ;
+}
+.client-link:hover .icon {
+    fill: var(--attention-color);
+}
+
 /* Футер */
 .footer {
     background-color: var(--secondary-bgcolor);
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
+
 
 .logo-footer {
     display: inline-block;
@@ -334,6 +428,44 @@ img {
 .address-list .contact:hover,
 .address-list .contact:focus {
     color: var(--attention-color);
+}
+
+.footer-social {
+    margin-left: 70px;
+}
+
+.footer-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--background-color);
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-media .icon {
+    fill: var(--background-color);
+}
+
+.footer-media:hover,
+.footer-media:focus {
+    background: var(--attention-color);
 }
 
 /* Портфоліо */
