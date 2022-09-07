@@ -91,7 +91,7 @@ img {
 
 
  .nav-link {
-    display: inline-block;
+    display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
@@ -102,9 +102,21 @@ img {
 }
 
 .header-nav .studio,
-.header-nav .portfolio-link {
+.header-nav .portfolio-current {
     color: var(--attention-color);
     font-family: inherit;
+    position: relative;
+}
+
+.header-nav .studio::after,
+.header-nav .portfolio-current::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    background: var(--attention-color);
+    border-radius: 2px;
 }
 
 .nav-list .nav-link:hover,
@@ -261,6 +273,37 @@ img {
     display: flex;
     justify-content: space-between;
 }
+
+.activity-wrap {
+    position: relative;
+    width: 100%;
+}
+
+
+.sub-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+}
+
+
+.activity-sub {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--background-color);
+}
+
 
 
 .section-title {
